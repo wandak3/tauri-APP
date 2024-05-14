@@ -2,6 +2,7 @@
 import Header from '@/components/header';
 import './globals.css';
 import Loader from '@/components/loader';
+import { Providers } from './providers';
 import Sidebar from '@/components/sidebar';
 import { useEffect, useState } from 'react';
 
@@ -25,7 +26,7 @@ export default function RootLayout({
             <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             <main>
               <div className='mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10'>
-                {children}
+                <Providers>{children}</Providers>
               </div>
             </main>
           </div>

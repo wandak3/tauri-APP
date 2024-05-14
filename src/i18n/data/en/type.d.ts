@@ -1,0 +1,13 @@
+export type MonsterType =
+  | 'MONSTER_ORDINARY'
+  | 'MONSTER_BOSS'
+  | 'MONSTER_ENV_ANIMAL'
+  | 'MONSTER_FISH'
+  | 'MONSTER_PARTNER';
+
+export type WeaponType =
+  | 'WEAPON_SWORD_ONE_HAND'
+  | 'WEAPON_CLAYMORE'
+  | 'WEAPON_POLE'
+  | 'WEAPON_CATALYST'
+  | 'WEAPON_BOW';
