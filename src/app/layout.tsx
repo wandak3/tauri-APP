@@ -1,10 +1,17 @@
 'use client';
 import Header from '@/components/header';
-import './globals.css';
 import Loader from '@/components/loader';
-import { Providers } from './providers';
 import Sidebar from '@/components/sidebar';
 import { useEffect, useState } from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import './globals.css';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 export default function RootLayout({
   children,
@@ -26,7 +33,7 @@ export default function RootLayout({
             <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             <main>
               <div className='mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10'>
-                <Providers>{children}</Providers>
+                <ThemeProvider theme={darkTheme}>{children}</ThemeProvider>
               </div>
             </main>
           </div>

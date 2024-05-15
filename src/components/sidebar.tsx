@@ -95,10 +95,10 @@ export default function Sidebar() {
                 <li>
                   <Link
                     className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-meta-4 false ${
-                      (pathname === '/gm' || pathname.includes('gm')) &&
+                      (pathname === '/admin' || pathname.includes('admin')) &&
                       'bg-meta-4'
                     }`}
-                    href='/gm'
+                    href='/admin'
                   >
                     <svg
                       className='fill-current'
